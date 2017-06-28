@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout-shifter</title>
+    <style>
+        .parent{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .subparent{
+            display:flex;
+            flex-wrap: wrap;
+        }
+        .box1, .box2 , .box3{
+            height: 200px;
+            width: 900px;
+        }
+        @media screen and (max-width:300px ){
+
+
+            .box1{
+                background-color: darkblue;
+                height:20vh;
+                width:100%;
+                order:1;
+            }
+            .subparent{
+                height:0vh;
+                width:100%;
+                order:2;
+            }
+
+            .box2{
+                background-color:blue;
+                height:70vh;
+                width:100%;
+                order:1;
+            }
+            .box3{
+                background-color: dodgerblue;
+                height:100vh;
+                width:100%;
+                order: 2;
+            }
+
+
+        }
+        @media screen and (min-width:300px ) and (max-width: 600px){
+
+            .box1{
+                background-color: darkblue;
+                height:20vh;
+                width:100%;
+                order:1;
+            }
+            .subparent{
+                height:0vh;
+                width:100%;
+                order:2;
+            }
+
+            .box2{
+                background-color:blue;
+                height:70vh;
+                width:100%;
+                order:1;
+            }
+            .box3{
+                background-color: dodgerblue;
+                height:100vh;
+                width:100%;
+                order: 2;
+            }
+
+
+
+        }
+        @media screen and (min-width:600px ) and (max-width: 950px){
+
+
+            .parent{
+                margin:0 20px 0 20px;
+            }
+            .box1{
+                background-color: darkblue;
+                height:100vh;
+                width:20%;
+                order:1;
+            }
+            .subparent{
+                width:80%;
+                height:100vh;
+                order:2;
+            }
+            .box2{
+                background-color:blue;
+                height:50vh;
+                width:100%;
+                order:1;
+            }
+            .box3{
+                background-color: dodgerblue;
+                height:50vh;
+                width:100%;
+                order:2;
+            }
+
+
+        }
+        @media screen and (min-width:950px ) and (max-width: 1366px){
+
+            .parent{
+                margin:0 80px 0 80px;
+            }
+            .box1{
+                background-color: darkblue;
+                height:100vh;
+                width:20%;
+                order:1;
+            }
+            .subparent{
+                width:80%;
+                height:100vh;
+                order:2;
+            }
+            .box2{
+                background-color:blue;
+                height:50vh;
+                width:100%;
+                order:1;
+            }
+            .box3{
+                background-color: dodgerblue;
+                height:50vh;
+                width:100%;
+                order:2;
+            }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="box1"></div>
+    <div class="subparent">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+
+
+</div>
+</body>
+</html>
